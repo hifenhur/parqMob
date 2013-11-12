@@ -1,0 +1,1 @@
+define(["backbone","text!templates/login/index.html"],function(e,t){var n=e.View.extend({el:"#container",template:_.template(t),render:function(){this.$el.html(this.template())},events:{click:"alertAe"},alertAe:function(e){}});return n});

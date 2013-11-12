@@ -1,0 +1,96 @@
+<div class="header" style="display: none;">
+    <h1> Estacionamento </h1>
+
+</div>
+  <div class="content" align="center">
+    <form action="#/sign_in" method="post" enctype="application/x-www-form-urlencoded">
+    <img src="imagens/logo.png" height="47" width="204"/>
+    <table>
+      <tr>
+        <td align="center" colspan="2">
+          <span id="firstline"> PARA ENTRAR E SAIR DO ESTACIONAMENTO</span>
+        </td>
+      </tr>
+     
+      <tr>
+        <td align="center" colspan="2">
+          <span id="secondline"> Possui cadastro? Insira seus dados. </span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="text" id="login" placeholder="Login" maxlength="20" autocomplete="off"/>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="password" id="senha" placeholder="Senha" maxlength="20" autocomplete="off"/>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 48%;" class="checker">
+          <input type="checkbox" id="c1" name="cc" />
+          <label for="c1"><span></span>Lembrar Senha</label>
+        </td>
+        <td>
+          <a href="app.html" id="login" class="button" style="display:none">Acessar</a>
+          <input type="submit" value="Acessar" class="button"/>
+        </td>
+      </tr>
+      <tr>
+      	<td colspan="2" align="center">
+          <span style="font-size:0.78rem;color:#FFF">Esqueceu sua senha 
+          	<a href="#"><strong>Clique aqui!</strong></a>
+          </span>
+        </td>
+      </tr>
+   </table>
+ </form>
+ </div>
+ <!-- div de separação do conteudo -->
+ <div class="separator"></div>
+   <div class="footer" align="center">
+    <span>Não cadastrado? <a href="#register" ><strong>Clique aqui para se cadastrar.</strong></a>
+   </div>
+   <div class="footer" align="center" id="outer-line" style="padding-bottom:20px;display:none">
+    <span>Esqueceu sua senha? <a href="#remember_password" ><strong>Clique aqui!</strong></a>
+   </div>
+  </div>
+  <!-- div de separação do conteudo -->
+  <div class="separator" style="margin-top:5%;"></div>
+  <!-- table of footer menu -->
+  <!-- <div class="footer-menu" align="center">
+  	<table>
+    	<tr>
+        	<td>
+            	<img src="imagens/24/clock.png" height="24" width="24"/>
+                Atualizar Saldo
+            </td>
+            <td>
+            	<img src="imagens/24/cart.png" height="24" width="24" />
+                Comprar Crédito
+            </td>
+            <td>
+            	<img src="imagens/24/bars.png" height="24" width="24"/>
+                Histórico
+            </td>
+            <td>
+            	<img src="imagens/24/user24.png" height="24" width="24"/>
+                Meus dados
+            </td>
+            <td>
+            	<img src="imagens/24/notice.png" height="24" width="24"/>
+                Contato
+            </td>
+        </tr>
+    </table>
+  </div> -->
+  <div class="modal" align="center">
+    <div class="title">
+      <span id="line"></span>
+      <div class="loader">
+        <span></span>
+      </div>
+    </div>
+  </div>
+</div>

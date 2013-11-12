@@ -1,0 +1,158 @@
+<div class="header">
+      <a href="#back"><img src="imagens/voltar.png" height="16" width="16"/> Voltar</a>
+      <h1> Cadastro </h1>
+   </div>
+   <div class="body-container">
+      <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+         <div class="content" align="center">
+            <!-- Expark Logo -->
+            <img src="imagens/logo.png" height="47" width="204"/>
+            <!-- Begin: table of contents -->
+            <table>
+               <tr>
+                  <td>
+                     <input type="text" id="login" placeholder="Nome Completo" maxlength="150" autocomplete="off"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <input type="text" id="email" placeholder="Email" maxlength="150" autocomplete="off"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <input type="text" id="cellphone" placeholder="Celular" maxlength="10" autocomplete="off"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <input type="password" id="senha" placeholder="Senha" maxlength="30" autocomplete="off"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <input type="password" id="retype-senha" placeholder="Confirmar Senha" maxlength="30" autocomplete="off"/>
+                  </td>
+               </tr>
+            </table>
+            <!-- end: table of contents -->
+            <!-- begin: div of phones -->
+            <div id="addcell" align="center">
+               <span>Adicionar outros usuários para a sua conta (parentes,funcionários,etc)</span>
+               <table>
+                  <tr>
+                     <td>
+                        <input type="text" pattern="[(]{1}[0-9]{2}[)]{1}[\s]{1}[0-9]{4}[-]{1}[0-9]{4}" id="phone" autocomplete="off" placeholder="Celular" class="number" title="Somente números."/>
+                     </td>
+                     <td style="background-color:#1C1C24;" align="center">
+                        <img src="imagens/24/adicionar24.png" height="24" width="24"/>
+                     </td>
+                  </tr>
+               </table>
+               <ul id="addedphones">
+               </ul>
+            </div>
+         </div>
+         <!-- end: div of phones -->
+         <!-- begin: div of credit card -->
+         <div id="creditcard" align="center">           
+            <table>
+               <tr>
+                  <td align="center" style="width: 50%;" colspan="2">
+                  	<span id="">Selecione o cartão </span>
+                  </td>
+                  <td align="center" style="width: 50%;">
+                  	<select id="selector">
+                       <option>Visa</option>
+                       <option>Mastercard</option>
+                       <option>Dinners</option>
+                       <option>Amex</option>
+                       <option>Hipercard</option>
+                    </select>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="3">
+                     <input type="text" id="card-name" placeholder="Nome impresso no cartão" maxlength="150" autocomplete="off"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="3">
+                     <input type="text" pattern="[0-9]{4}[\s]{1}[0-9]{4}[\s]{1}[0-9]{4}[\s]{1}[0-9]{4}" id="card-number" placeholder="Número do cartão" maxlength="19" autocomplete="off" class="number" title="Somente números."/>
+                  </td>
+               </tr
+            ></table>
+            <table>
+            	<tr>
+                  <td style="width:33.3%">
+                     <input type="number" id="card-month" placeholder="Mes" maxlength="2" autocomplete="off" class="no-css"/>
+                  </td>
+                  <td style="width:33.3%">
+                     <input type="number" id="card-year" placeholder="Ano" maxlength="4" autocomplete="off" class="no-css"/>
+                  </td>
+                  <td style="width:33.3%">
+                     <input type="number" id="card-secret-code" placeholder="Cód. Seg." maxlength="3" autocomplete="off" class="no-css"/>
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <!-- end: div of credit card -->
+         <div id="terms" align="center">
+            <input type="checkbox" id="c1" name="cc" /><label for="c1">
+            <span tabindex="12"></span>Li e concordo com o Termo de Uso<br/>
+            e Adesão de Compra</label>
+         </div>
+         <div align="center">
+            <a href="#" class="button" id="cadastrar" style="display:none">Cadastrar</a>
+            <input type="submit" value="Cadastrar" class="button" id="submit"  style="margin-bottom:7%;margin-top:7% !important"/>
+         </div>
+   </div>
+   </form>
+   <!-- table of footer menu -->
+      <!-- 
+      <div class="footer-menu" align="center">
+        <table>
+          <tr>
+              <td>
+                  <a href="#" class="bottom-menu" style="display:inline-block;">
+                        <img src="imagens/24/clock.png" height="24" width="24"/>
+                        Atualizar Saldo
+                    </a>
+                </td>
+                <td>
+                  <a href="#" class="bottom-menu" style="display:inline-block;">
+                        <img src="imagens/24/cart.png" height="24" width="24" />
+                        Comprar Crédito
+                    </a>
+                </td>
+                <td>
+                  <a href="#" class="bottom-menu" style="display:inline-block;">
+                        <img src="imagens/24/bars.png" height="24" width="24"/>
+                        Histórico
+                    </a>
+                </td>
+                <td>
+                  <a href="#" class="bottom-menu" style="display:inline-block;">
+                        <img src="imagens/24/user24.png" height="24" width="24"/>
+                        Meus dados
+                    </a>
+                </td>
+                <td>
+                  <a href="#" class="bottom-menu" style="display:inline-block;">
+                        <img src="imagens/24/notice.png" height="24" width="24"/>
+                        Contato
+                    </a>
+                </td>
+            </tr>
+        </table>
+      </div>
+    -->
+   </div>
+   <div class="modal" align="center">
+      <div class="title">
+         <span id="line"></span>
+         <div class="loader">
+            <span></span>
+         </div>
+      </div>
+   </div>

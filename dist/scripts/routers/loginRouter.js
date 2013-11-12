@@ -1,0 +1,1 @@
+define(["backbone","views/login"],function(e,t){var n=e.Router.extend({routes:{back:"backPage"},backPage:function(){var e=new t;e.render()}});return n});

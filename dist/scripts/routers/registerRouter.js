@@ -1,0 +1,1 @@
+define(["backbone","views/register"],function(e,t){var n=e.Router.extend({routes:{register:"registrar"},registrar:function(){var e=new t;e.render()}});return n});
