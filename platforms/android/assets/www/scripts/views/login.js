@@ -3,7 +3,7 @@ define([
   'models/session',
 	'text!templates/login/index.html',
 	], function(Backbone,Session ,Template) {
-
+  var invalid_password = false;
   var LoginView = Backbone.View.extend({
     el: '#container',
   	template: _.template(Template),
@@ -21,19 +21,30 @@ define([
       e.preventDefault();
         $.ajax({
           beforeSend: function(){
-            console.log('carregando...')
+            $('#modal').show()
           },
           complete: function(data){
-            console.log('backkkkkk');
-            window.location.href = "#back"
+            $('#modal').hide()
+            $.get(default_url+'/auth').success(function(auth){
+              if (auth != true) {
+                if (invalid_password) {
+                  alert("usuario ou senha incorretos");
+                  window.location.href = "#sign_in"
+                  invalid_password = !invalid_password;
+                };
+              }
+              else{
+                window.location.href = "#back"
+              };
+            })
+            
           },
           type: "POST",
           contentType: "application/json;charset=utf-8",
-          url: default_url+'/users/sign_in',
+          url: default_url+'/users/sign_in.json',
           data: JSON.stringify({user:{ 
             login: $('#login').val(), 
             password: $('#password').val(),
-            remember: true,
             },
           xhrFields:{'withCredentials': true}
           }),

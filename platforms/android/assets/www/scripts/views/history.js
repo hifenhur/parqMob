@@ -22,8 +22,13 @@ define([
       self = this
       this.$el.html(this.template)
       var collection = this.collection
-      collection.fetch({success: function(){
-        console.log(collection.length);
+      collection.fetch({
+      beforeSend: function(){
+        console.log("cargando...")
+        $('#modal').show();
+      },
+      success: function(){
+        $('#modal').hide();
         collection.forEach(self.addOne, this);
       }});
       

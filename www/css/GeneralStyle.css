@@ -607,3 +607,22 @@ tr#table-header {
     color: #FFFFFF;
     opacity: 0.51;
 }
+
+#modal {
+    background: none repeat scroll 0 0 rgba(100, 100, 100, 0.6);
+    color: #FFFFFF;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: none;
+}
+
+#modal > * {
+    position: relative;
+    text-align: center;
+    top: 48%;
+}
+.js-modal{
+    margin-top: 42px;
+}

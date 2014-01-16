@@ -1,0 +1,112 @@
+<script type="text/javascript">
+  	$(document).ready(function(e) {
+		//Quando o usuário clicar sobre o item que ele deseja adiciona um efeito ao item selecionado
+        $("div.content table tr td div").click(function(){
+			$("div.content table tr td div").removeClass("selected");
+			$("div.content table tr td div:not(#div-value)").addClass("selected");
+		});
+    });
+  </script>
+  <!-- Fonts -->
+  <link rel="stylesheet" href="fonts.css">
+  <!-- General Settings -->
+  <link rel="stylesheet" href="style/GeneralStyle.css">
+  <style type="text/css">
+  	div.content table{
+		color: #FFFFFF;
+		font-size: 0.9rem;
+		text-align: center;
+		width: 100%;	
+	}
+	div.choose-item{
+		background-color: #A62B40;
+		border-radius: 2px;
+		font-size: 5rem;
+		cursor:pointer;
+		transition:linear all 0.3s;
+	}
+	div#div-value{
+		margin-top:3%;	
+		background-color:#1C1C24;
+		padding:5px;
+		border-radius:2px;
+	}
+	input#BRLvalue{
+		background-color: #D1D4D6;
+		background-image: none;
+		color: #000000;
+		margin: 3px;
+		padding: 10px !important;
+		width: 90%;
+	}
+	input[type=submit].button{
+		margin-top: 5%;
+		width:100%;	
+	}
+  </style>
+</head>
+</body>
+	<div class="header">
+    <a href="#back" ><img src="imagens/voltar.png" height="16" width="16"/> Voltar</a>
+		<h1> Comprar crédito </h1>
+	</div>
+  <div class="content" align="center">
+    <figure>
+      <img src="imagens/logo.png" height="47" width="204"/>
+    </figure>
+    <table>
+    	<tr>
+        	<td colspan="2">
+            	<span> Escolha uma das opções abaixo e depois clique em comprar </span>
+            </td>
+        </tr>
+        <tr>
+        	<td>
+            	<div class="choose-item" data-selected="false">
+                	<span> 2h </span>
+                </div>
+            </td>
+            <td>
+                <div class="choose-item" data-selected="false">
+                    <span> 4h </span>
+                </div>
+        	</td>
+        </tr>
+        <tr>
+        	<td>
+            	<div class="choose-item" data-selected="false">
+                	<span> 6h </span>
+                </div>
+            </td>
+            <td>
+                <div class="choose-item" data-selected="false">
+                    <span> 8h </span>
+                </div>
+        	</td>
+        </tr>
+        <tr>
+        	<td colspan="2" style="padding:2px;border-radius:2px">
+            	<div id="div-value">
+                	<span> Ou insira o VALOR que deseja comprar (R$) </span>
+                    <input type="text" id="BRLvalue" placeholder="R$"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+        	<td colspan="2">
+            	<input type="submit" value="Comprar" class="button"/>
+            </td>
+        </tr>
+    </table>
+  </div>
+  
+  <!-- Modal dialog -->
+  <div class="modal" align="center">
+    <div class="title">
+      <span id="line">Enviando solicitação</span>
+      <div class="loader">
+        <img src="imagens/loader.gif" style="heigth:40%" /><span>Por favor aguarde...</span>
+      </div>
+    </div>
+  </div>
+</body>

@@ -3,11 +3,13 @@ define([
   'views/login',
   'views/register',
   'views/home',
+  'views/qrcode',
+  'views/order',
   'views/history',
   'views/edit',
   'collections/transations_history',
   'models/user'
-  ], function(   Backbone,   LoginView,   RegisterView,   HomeView,   HistoryView, EditView, TransationsHistory, User){
+  ], function(   Backbone,   LoginView,   RegisterView,   HomeView, QrcodeView, OrderView,   HistoryView, EditView, TransationsHistory, User){
   var route = Backbone.Router.extend({
     routes: {
       "register": 'register', 
@@ -15,7 +17,9 @@ define([
       'back': 'backPage',
       'history': 'history',
       'sign_out': 'signOut',
-      'edit':'edit'
+      'edit':'edit',
+      'order': 'order',
+      'qrcode': 'qrcode',
      },
 
      loginPage: function(){
@@ -27,7 +31,14 @@ define([
       var homeView = new HomeView();
       homeView.render();
      },
-
+     order: function(){
+      var orderView = new OrderView();
+      orderView.render();
+     },
+     qrcode: function(){
+      var qrcodeView = new QrcodeView();
+      qrcodeView.render();
+     },
      edit: function(){
       var user = new User()
       user.fetch({success:function(model){

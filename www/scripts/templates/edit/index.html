@@ -10,12 +10,7 @@
 		   var addedScroll = false;
          
            //Definindo as mascaras
-           $("input#cellphone").mask('(00) 0000-0000');
-           $("input#phone").mask('(00) 0000-0000');
-           $("input#card-number").mask('0000 0000 0000 0000');
-           $("input#card-month").mask('00');
-           $("input#card-year").mask('0000');
-           $("input#card-secret-code").mask('000');
+         
          
          
            //Quando a imagem de adição for clicada
@@ -276,7 +271,7 @@
                </tr>
                <tr>
                   <td>
-                     <input type="text" id="cellphone" placeholder="Celular" maxlength="10" autocomplete="off"/>
+                     <input type="text" id="cellphone" placeholder="Celular" maxlength="10" autocomplete="off" value=""/>
                   </td>
                </tr>
                <tr>
@@ -332,7 +327,7 @@
                </tr>
                <tr>
                   <td colspan="3">
-                     <input type="text" id="card-name" placeholder="Nome impresso no cartão" maxlength="150" autocomplete="off"/>
+                     <input type="text" id="card-name" placeholder="Nome impresso no cartão" maxlength="150" autocomplete="off" value="<%= user_info.name%>"/>
                   </td>
                </tr>
                <tr>
@@ -370,3 +365,13 @@
       </div>
    </div>
    </body>
+
+<script type="text/javascript">
+$("input#cellphone").mask('(99) 9999-9999');
+   $("input#phone").mask('(99) 9999-9999');
+   $("input#card-number").mask('9999 9999 9999 9999');
+   $("input#card-month").mask('99');
+   $("input#card-year").mask('9999');
+   $("input#card-secret-code").mask('999');
+</script>
+

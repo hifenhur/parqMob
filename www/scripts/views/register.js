@@ -15,13 +15,7 @@ define([
       this.$el.html( this.template() );
     },
 
-    events: {
-      'click': "alertAe"
-    },
-
-    alertAe: function(e){
-      
-    },
+    
 
   });
 

@@ -14,18 +14,30 @@
      <script src="phonegap.js"></script>
 
      <script data-main="scripts/main" src="scripts/vendor/requirejs/require.js"></script>
-     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-      <script type="text/javascript" src="js/jquery.mask.min.js" ></script>
-      <script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
-      <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
-      <script type="text/javascript" src="js/core.js"></script>
+     
   </body>
 
   <div id="container">
   </div>
 </html>
 
+<div id="modal" >
+  <h2>Carregando...</h2>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
 
-
+   $('input, textarea')
+   .on('focus', function (e) {
+      $('header, footer').css('position', 'absolute');
+   })
+   .on('blur', function (e) {
+      $('header, footer').css('position', 'fixed');
+      //force page redraw to fix incorrectly positioned fixed elements
+      setTimeout( function() {
+          window.scrollTo( $.mobile.window.scrollLeft(), $.mobile.window.scrollTop() );
+      }, 20 );
+   });
+ })
+</script>
 

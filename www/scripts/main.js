@@ -1,4 +1,4 @@
-var default_url = 'http://172.16.1.22:3000';
+var default_url = 'http://demo.xavante.net.br';
 
 require.config({
   paths: {
@@ -7,7 +7,8 @@ require.config({
     'backbone': 'vendor/backbone-amd/backbone-min',
     'text': 'vendor/requirejs-text/text',
     'jquery-cookie': 'vendor/jquery.cookie/jquery.cookie',
-    'sugar': 'vendor/sugarjs/sugarjs'
+    'sugar': 'vendor/sugarjs/sugarjs',
+    'qrcode': 'vendor/qrcode/jquery.qrcode',
   }
 });
 require([
